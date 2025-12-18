@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>11.9 Форма опроса</title>
+</head>
+<body>
+    <h1>Форма опроса</h1>
+    
+    <form id="surveyForm">
+        <div>
+            <label for="username">Имя пользователя:</label><br>
+            <input type="text" id="username" name="username">
+            <div id="usernameError"></div>
+        </div>
+        
+        <br>
+        
+        <div>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email">
+            <div id="emailError"></div>
+        </div>
+        
+        <br>
+        
+        <div>
+            <label>Пол:</label><br>
+            <input type="radio" id="male" name="gender" value="Мужской">
+            <label for="male">Мужской</label><br>
+            <input type="radio" id="female" name="gender" value="Женский">
+            <label for="female">Женский</label>
+        </div>
+        
+        <br>
+        
+        <div>
+            <label for="rating">Оценка сервиса: <span id="ratingValue">5</span>/10</label><br>
+            <input type="range" id="rating" name="rating" min="1" max="10" value="5">
+        </div>
+        
+        <br>
+        
+        <div>
+            <label>Интересы пользователя:</label><br>
+            <input type="checkbox" id="sport" name="interests" value="Спорт">
+            <label for="sport">Спорт</label><br>
+            <input type="checkbox" id="music" name="interests" value="Музыка">
+            <label for="music">Музыка</label><br>
+            <input type="checkbox" id="travel" name="interests" value="Путешествия">
+            <label for="travel">Путешествия</label><br>
+            <input type="checkbox" id="movies" name="interests" value="Кино">
+            <label for="movies">Кино</label>
+        </div>
+        
+        <br>
+        
+        <div>
+            <label for="comments">Дополнительные комментарии:</label><br>
+            <textarea id="comments" name="comments" rows="4" cols="40"></textarea>
+        </div>
+        
+        <br>
+        
+        <button type="submit">Отправить</button>
+    </form>
+    
+    <div id="result">
+        <h2>Данные пользователя:</h2>
+        <div><strong>Имя:</strong> <span id="resultName"></span></div>
+        <div><strong>Email:</strong> <span id="resultEmail"></span></div>
+        <div><strong>Пол:</strong> <span id="resultGender"></span></div>
+        <div><strong>Оценка сервиса:</strong> <span id="resultRating"></span>/10</div>
+        <div><strong>Интересы:</strong> <span id="resultInterests"></span></div>
+        <div><strong>Комментарии:</strong> <span id="resultComments"></span></div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
