@@ -1,0 +1,35 @@
+body {
+    font-family: Arial, sans-serif;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.buttons {
+    margin: 20px 0;
+}
+
+button {
+    padding: 10px 20px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.products-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.products-list li {
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+}
+
+.products-list li.no-data {
+    background-color: #ffebee;
+    color: #c62828;
+    font-style: italic;
+}
