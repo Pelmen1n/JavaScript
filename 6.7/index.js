@@ -1,0 +1,44 @@
+// Задача 1
+const products = ["Мышка", "Клавиатура", "Наушники"];
+const newProducts = ["Монитор", "Принтер", "Флешка"];
+
+products.push(...newProducts);
+
+const productsList = document.querySelector('.products');
+
+for (let i = 0; i < products.length; i++) {
+    const listItem = document.createElement('li');
+    listItem.textContent = products[i];
+    productsList.append(listItem);
+}
+
+// Задача 2
+const numbers = [15, 7, 42, 3, 21, 9, 36];
+
+const allElements = document.querySelector('.all-elements');
+const minButton = document.querySelector('.min');
+const maxButton = document.querySelector('.max');
+const minNumber = document.querySelector('.minNumber');
+const maxNumber = document.querySelector('.maxNumber');
+
+allElements.textContent = numbers.join(', ');
+
+minButton.onclick = function() {
+    let min = numbers[0];
+    for (let i = 1; i < numbers.length; i++) {
+        if (numbers[i] < min) {
+            min = numbers[i];
+        }
+    }
+    minNumber.textContent = min;
+};
+
+maxButton.onclick = function() {
+    let max = numbers[0];
+    for (let i = 1; i < numbers.length; i++) {
+        if (numbers[i] > max) {
+            max = numbers[i];
+        }
+    }
+    maxNumber.textContent = max;
+};
