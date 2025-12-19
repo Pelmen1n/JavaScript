@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Подарок</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+        
+        .popup {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+            text-align: center;
+            min-width: 300px;
+            max-width: 400px;
+            z-index: 1000;
+            display: none;
+        }
+        
+        .popup h2 {
+            margin-top: 0;
+            color: #333;
+        }
+        
+        .popup p {
+            color: #666;
+            margin: 20px 0;
+        }
+        
+        .gift-icon {
+            width: 80px;
+            height: 80px;
+            background-color: #4CAF50;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 40px;
+        }
+        
+        .close-btn {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 30px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+        
+        .close-btn:hover {
+            background-color: #45a049;
+        }
+        
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+            z-index: 999;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Добро пожаловать в наш магазин!</h1>
+    <p>Специальное предложение появится через 3 секунды...</p>
+    
+    <div class="overlay" id="overlay"></div>
+    
+    <div class="popup" id="popup">
+        <div class="gift-icon" id="giftIcon">🎁</div>
+        <h2 id="popupTitle">Подарок при первой покупке!</h2>
+        <p id="popupText">Воспользуйтесь нашим специальным предложением прямо сейчас!</p>
+        <button class="close-btn" id="closeBtn">Отлично!</button>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
