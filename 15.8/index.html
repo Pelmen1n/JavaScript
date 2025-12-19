@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Коллекция фильмов</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        
+        h1 {
+            margin-bottom: 20px;
+        }
+        
+        .form-container {
+            background: #f5f5f5;
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 30px;
+        }
+        
+        .form-group {
+            margin-bottom: 15px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        input[type="text"],
+        input[type="number"] {
+            padding: 5px;
+            width: 200px;
+        }
+        
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+        }
+        
+        .checkbox-group input {
+            margin-right: 10px;
+        }
+        
+        .submit-btn {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 8px 20px;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+        
+        .filters-container {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+            align-items: center;
+        }
+        
+        .filter-input {
+            padding: 5px;
+            width: 200px;
+        }
+        
+        .delete-all-btn {
+            background: #dc3545;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            cursor: pointer;
+            border-radius: 3px;
+            margin-left: auto;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        
+        th {
+            background: #f2f2f2;
+        }
+        
+        .delete-btn {
+            background: #dc3545;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+        
+        .error {
+            color: red;
+            font-size: 12px;
+            margin-top: 5px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Коллекция фильмов</h1>
+    
+    <div class="form-container">
+        <h2>Добавить фильм</h2>
+        <form id="film-form">
+            <div class="form-group">
+                <label for="title">Название:</label>
+                <input type="text" id="title" name="title">
+                <div class="error" id="titleError">Введите название</div>
+            </div>
+            
+            <div class="form-group">
+                <label for="genre">Жанр:</label>
+                <input type="text" id="genre" name="genre">
+                <div class="error" id="genreError">Введите жанр</div>
+            </div>
+            
+            <div class="form-group">
+                <label for="releaseYear">Год:</label>
+                <input type="number" id="releaseYear" name="releaseYear">
+                <div class="error" id="yearError">Введите год</div>
+            </div>
+            
+            <div class="form-group">
+                <div class="checkbox-group">
+                    <input type="checkbox" id="isWatched" name="isWatched">
+                    <label for="isWatched">Успели посмотреть?</label>
+                </div>
+            </div>
+            
+            <button type="submit" class="submit-btn">Добавить</button>
+        </form>
+    </div>
+    
+    <div class="filters-container">
+        <input type="text" id="filterInput" placeholder="Поиск..." class="filter-input">
+        <select id="filterType">
+            <option value="title">Название</option>
+            <option value="genre">Жанр</option>
+            <option value="releaseYear">Год</option>
+            <option value="isWatched">Просмотр</option>
+        </select>
+        <button id="clearAllBtn" class="delete-all-btn">Удалить всё</button>
+    </div>
+    
+    <table id="film-table">
+        <thead>
+            <tr>
+                <th>Название</th>
+                <th>Жанр</th>
+                <th>Год</th>
+                <th>Успели посмотреть?</th>
+                <th>Действие</th>
+            </tr>
+        </thead>
+        <tbody id="film-tbody">
+            <tr id="noFilmsRow">
+                <td colspan="5" align="center">Нет фильмов</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script src="index.js"></script>
+</body>
+</html>
