@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Промокод</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+        
+        .promo-form {
+            max-width: 400px;
+            margin: 50px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .promo-form h2 {
+            margin-top: 0;
+            color: #333;
+        }
+        
+        .input-group {
+            display: flex;
+            margin: 20px 0;
+        }
+        
+        .promo-input {
+            flex: 1;
+            padding: 10px;
+            border: 2px solid #ddd;
+            border-radius: 5px 0 0 5px;
+            font-size: 16px;
+        }
+        
+        .promo-btn {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 0 5px 5px 0;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        
+        .promo-btn:hover {
+            background-color: #45a049;
+        }
+        
+        .success-message {
+            background-color: #d4edda;
+            color: #155724;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 20px;
+            display: none;
+        }
+        
+        .error-message {
+            background-color: #f8d7da;
+            color: #721c24;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 20px;
+            display: none;
+        }
+        
+        .active-form {
+            background-color: #e8f5e9;
+            border: 2px solid #4CAF50;
+        }
+    </style>
+</head>
+<body>
+    <div class="promo-form" id="promoForm">
+        <h2>Введите промокод</h2>
+        <p>Для получения специального предложения введите ваш промокод:</p>
+        
+        <form id="promoCodeForm">
+            <div class="input-group">
+                <input type="text" id="promoInput" class="promo-input" placeholder="Например: PROM50">
+                <button type="submit" class="promo-btn">Применить</button>
+            </div>
+        </form>
+        
+        <div class="success-message" id="successMessage">
+            <h3>🎉 Промокод успешно активирован!</h3>
+            <p>Ваш подарок: <strong id="giftText">Скидка 50%</strong></p>
+        </div>
+        
+        <div class="error-message" id="errorMessage">
+            <h3>❌ Неверный промокод</h3>
+            <p>Пожалуйста, проверьте правильность введенного промокода и попробуйте снова.</p>
+        </div>
+    </div>
+
+    <script src="1_index.js"></script>
+</body>
+</html>
