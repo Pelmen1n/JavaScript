@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>11.9 Дизайн банковской карты</title>
+    <style>
+        #card {
+            width: 300px;
+            height: 180px;
+            border: 2px solid #333;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+            font-family: Arial, sans-serif;
+            color: white;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+            display: flex;
+            align-items: flex-end;
+            transition: background-color 0.3s;
+        }
+        
+        .input-field {
+            padding: 8px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            width: 200px;
+        }
+        
+        .input-field:focus {
+            outline: none;
+            border-color: #4CAF50;
+            background-color: #f9fff9;
+        }
+        
+        select {
+            padding: 8px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Настройка банковской карты</h1>
+    
+    <div>
+        <label for="cardText">Введите текст для карты:</label><br>
+        <input type="text" id="cardText" class="input-field" placeholder="Например: Visa Platinum">
+    </div>
+    
+    <br>
+    
+    <div>
+        <label for="cardColor">Выберите цвет карты:</label><br>
+        <select id="cardColor">
+            <option value="#c62828">Красный</option>
+            <option value="#1565c0">Синий</option>
+            <option value="#2e7d32">Зеленый</option>
+        </select>
+    </div>
+    
+    <h2>Ваша карта:</h2>
+    <div id="card">
+        <!-- Текст будет добавляться сюда -->
+    </div>
+
+    <script src="2_index.js"></script>
+</body>
+</html>
