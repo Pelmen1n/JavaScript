@@ -1,2 +1,2 @@
 # JavaScript
-JS Smetanin
+JS Сметанин Георгий
