@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progress Bar & Images Loading</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Загрузка изображений с Progress Bar</h1>
+    
+    <!-- Задание 2: Progress Bar -->
+    <div class="task-section">
+        <h2>Задание 2: Прогресс бар</h2>
+        <div id="progress-container">
+            <div id="progress-bar"></div>
+        </div>
+        <div id="timer">0 с</div>
+        <button id="start-progress-btn">Запустить прогресс бар (5 сек)</button>
+    </div>
+    
+    <!-- Задание 1 и 3: Загрузка изображений -->
+    <div class="task-section">
+        <h2>Задание 1 и 3: Загрузка изображений</h2>
+        <button id="load-images-btn">Загрузить изображения</button>
+        
+        <!-- Прогресс бар для первой функции -->
+        <div class="function-progress">
+            <h3>Функция 1 (Коты):</h3>
+            <div class="progress-container">
+                <div class="progress-bar" id="progress-bar-1"></div>
+            </div>
+            <div class="timer" id="timer-1">0 с</div>
+        </div>
+        
+        <div id="images-container-1" class="images-container"></div>
+        
+        <!-- Прогресс бар для второй функции -->
+        <div class="function-progress">
+            <h3>Функция 2 (Собаки):</h3>
+            <div class="progress-container">
+                <div class="progress-bar" id="progress-bar-2"></div>
+            </div>
+            <div class="timer" id="timer-2">0 с</div>
+        </div>
+        
+        <div id="images-container-2" class="images-container"></div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
